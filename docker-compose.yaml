@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  database:
+    image: postgres:9.6
+    container_name: grocery-database
+    hostname: grocery-database
+    environment:
+      - POSTGRES_USER=grocery
+      - POSTGRES_PASSWORD=grocery
+      - POSTGRES_DB=grocery
+    ports:
+      - "5432:5432"
